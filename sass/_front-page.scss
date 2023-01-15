@@ -1,61 +1,113 @@
-.hero {
-  position: relative;
-  padding: 2rem 0;
-  background: red;
-  background-image: url('./img/vending-machine-1.jpg');
-
-  &:after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to bottom right, #c24343, #d95f3a, #e87e2f, #f0a022, #f0c31b, #e3d117, #d3de1f, #c0eb30, #a5e630, #88e033, #68da38, #3ed43e);
-    filter: brightness(0.6);
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-  }
+section {
+  background-color: #ebebeb; 
+  color: rgb(15, 15, 15);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 90px;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 2rem;
+  padding: 2rem 1.5rem !important;
 }
 
-.masthead {
+
+
+.about {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem !important;
   z-index: 1;
-  background-color: #ffecec;
-  color: rgb(15, 15, 15);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 80px;
-  border-bottom-left-radius: 80px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 20px 20px 0px 1px rgba(0,0,0,0.8);  
-  
-    
-  .site-branding {
-    h1 {
-      font-size: 3rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: rgb(21, 5, 5);
-      font-weight: 900;
-    }
-  }
 
   .vending-machine-graphic-container {
     padding: 20px;
 
     .vending-machine-graphic {
       background-image: url('./img/vending-machine.jpg');
-      height: 400px;
-      width: 230px;
+      height: 240px;
+      width: 140px;
       background-size: contain;
       background-repeat: no-repeat;
       border-top: 2px solid #000;
-      border-bottom: 10px solid #000;
-      box-shadow: 20px 20px 0px 1px rgba(0,0,0,0.8);
+      border-bottom: 20px solid #000;
       overflow: hidden;
       border-radius: 10%;
+    }
+  }
+}
+
+.locations {
+  ul.location-cards {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+
+    li.card {
+      display: grid;
+      flex-direction: column;
+      width: 100%;
+      margin: 10px;
+      box-shadow: 1px 1px 0px 1px rgba(38, 38, 38, 0.8);
+      border-radius: 5px;
+      background-color: #fff;
+      border: 1px solid #000;
+      overflow: hidden;
+      transition: all 30ms linear;
+
+      &:hover,
+      &:focus {
+        box-shadow: 6px 6px 0px 2px rgba(38, 38, 38, 0.8);
+        transform: scale(1.01)
+      }
+
+      .card-content {
+        padding: 0.5rem;
+
+        h3 {
+          font-size: 1rem;
+
+          sup {
+            display: block;
+            font-size: 0.6rem;
+          }
+        }
+      }
+
+      .location-img {
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        border-bottom: 1px solid #000;
+
+        &.one {
+          background-image: url('./img/location-1.png');
+        }
+
+        &.two {
+          background-image: url('./img/location-2.png');
+        }
+
+        &.three {
+          background-image: url('./img/location-3.png');
+        }
+      }
+
+      a {
+        align-self: flex-end;
+        padding: 0.4rem;
+        background-color: rgb(32, 90, 56);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background-color: rgb(37, 112, 69);
+        }
+
+        &:active {
+          background-color: rgb(41, 127, 78);
+        }
+      }
     }
   }
 }
