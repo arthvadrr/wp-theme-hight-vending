@@ -1,0 +1,61 @@
+.hero {
+  position: relative;
+  padding: 2rem 0;
+  background: red;
+  background-image: url('./img/vending-machine-1.jpg');
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #c24343, #d95f3a, #e87e2f, #f0a022, #f0c31b, #e3d117, #d3de1f, #c0eb30, #a5e630, #88e033, #68da38, #3ed43e);
+    filter: brightness(0.6);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+  }
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem !important;
+  z-index: 1;
+  background-color: #ffecec;
+  color: rgb(15, 15, 15);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 20px 20px 0px 1px rgba(0,0,0,0.8);  
+  
+    
+  .site-branding {
+    h1 {
+      font-size: 3rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: rgb(21, 5, 5);
+      font-weight: 900;
+    }
+  }
+
+  .vending-machine-graphic-container {
+    padding: 20px;
+
+    .vending-machine-graphic {
+      background-image: url('./img/vending-machine.jpg');
+      height: 400px;
+      width: 230px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      border-top: 2px solid #000;
+      border-bottom: 10px solid #000;
+      box-shadow: 20px 20px 0px 1px rgba(0,0,0,0.8);
+      overflow: hidden;
+      border-radius: 10%;
+    }
+  }
+}
