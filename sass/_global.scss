@@ -15,7 +15,7 @@ body {
 }
 
 .site-title a {
-  font-size: 20px;
+  font-size: 1.4rem;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
@@ -26,11 +26,39 @@ body {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-top: 0;
   margin-bottom: 1rem;
   color: rgb(21, 5, 5);
   font-weight: 900;
+
+  small {
+    font-size: 0.8rem;
+    margin-top: -1rem;
+  }
+}
+
+form.contact-form {
+ .form-group {
+  display: flex;
+  margin-bottom: 1rem;
+
+  label,
+  input {
+    display: block;
+    margin-right: 10px;
+  }
+ }
+
+  .form-group ~ input[required] {
+  &:after {
+    content: '*';
+    display: block;
+    height:200px;
+    width: 200px;
+    color: red;
+  }
+ }
 }
 
 .content-container {

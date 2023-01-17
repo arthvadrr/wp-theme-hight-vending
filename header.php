@@ -28,11 +28,7 @@
 			<div class="site-branding content-width">
 				<?php the_custom_logo(); ?>
 				<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				<?php
-				$hight_vending_description = get_bloginfo('description', 'display');
-				if ($hight_vending_description || is_customize_preview()) :
-				?>
-					<p class="site-description"><?php echo $hight_vending_description; ?></p>
-				<?php endif; ?>
 			</div>
 		</header>
+	</div>
+	</header>
